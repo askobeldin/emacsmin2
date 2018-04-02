@@ -1,0 +1,15 @@
+# emacs
+
+elpa/
+auto-save-list/
+url/
+eshell/
+.cache/
+server/
+semanticdb/
+
+
+*.swp
+*.*~
+bookmarks
+projectile-bookmarks*
