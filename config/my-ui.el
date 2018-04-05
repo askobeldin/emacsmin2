@@ -122,16 +122,17 @@ name of the buffer."
 ;(setq evil-motion-state-cursor '("#ffff00" box))
 ;(setq evil-emacs-state-cursor   '("#cd0000" hollow))
 
+
 ;; Theme
 ;(load-theme 'faff t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; (add-to-list 'custom-theme-load-path
-             ; (concat user-emacs-directory "themes"))
+(add-to-list 'custom-theme-load-path
+              (concat user-emacs-directory "themes"))
 
 ; ;; load my favorite theme
-; (load-theme 'classic t t)
-; (enable-theme 'classic)
+(load-theme 'classic t t)
+(enable-theme 'classic)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Calendar
