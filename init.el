@@ -21,6 +21,8 @@
                   evil-matchit
                   evil-surround
                   evil-visualstar
+                  faff-theme
+                  neotree
                   ))
 
 
@@ -62,8 +64,8 @@
 (require 'my-buffers)
 ;(require 'my-ag)
 ; (require 'my-autocomplete)
-;(require 'my-dired)
-;(require 'my-neotree)
+(require 'my-dired)
+(require 'my-neotree)
 ;(require 'my-ido)
 ;(require 'my-languages)
 (require 'my-evil)

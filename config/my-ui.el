@@ -115,24 +115,24 @@ name of the buffer."
       query-replace-highlight t)
 
 ;; Cursor for evil mode
-;(setq evil-default-cursor  '("#cd0000" box))
-;(setq evil-normal-state-cursor  '("#00008b" box))
-;(setq evil-insert-state-cursor  '("#00008b" (hbar . 3)))
-;(setq evil-replace-state-cursor '("#008b8b" box))
-;(setq evil-motion-state-cursor '("#ffff00" box))
-;(setq evil-emacs-state-cursor   '("#cd0000" hollow))
+(setq evil-default-cursor  '("#cd0000" box))
+(setq evil-normal-state-cursor  '("#00008b" box))
+(setq evil-insert-state-cursor  '("#00008b" (hbar . 3)))
+(setq evil-replace-state-cursor '("#008b8b" box))
+(setq evil-motion-state-cursor '("#ffff00" box))
+(setq evil-emacs-state-cursor   '("#cd0000" hollow))
 
 
 ;; Theme
-;(load-theme 'faff t)
+(load-theme 'faff t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'custom-theme-load-path
-              (concat user-emacs-directory "themes"))
+;(add-to-list 'custom-theme-load-path
+              ;(concat user-emacs-directory "themes"))
 
 ; ;; load my favorite theme
-(load-theme 'classic t t)
-(enable-theme 'classic)
+;(load-theme 'classic t t)
+;(enable-theme 'classic)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Calendar
