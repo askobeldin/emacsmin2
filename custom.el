@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (key-chord evil-visualstar evil-surround evil-matchit evil-nerd-commenter evil-leader evil use-package))))
+    (ido-vertical-mode flx-ido ido-ubiquitous smex key-chord evil-visualstar evil-surround evil-matchit evil-nerd-commenter evil-leader evil use-package))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

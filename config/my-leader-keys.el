@@ -28,6 +28,7 @@
         ","          'other-window
 
         "#"          'linum-mode
+        "x"          'smex
 
         ;; evil-nerd-commenter config
         "cc"         'evilnc-comment-or-uncomment-lines
@@ -39,7 +40,23 @@
         "TAB"        'my-hop-around-buffers
         "b"          'ibuffer
         "B"          'switch-to-buffer
+        "jb"         'ace-jump-thefiles-buffers
 
+        ;; popup-switcher config
+        "pb"         'psw-switch-buffer
+        "pr"         'psw-switch-recentf
+        "pn"         'psw-navigate-files
+        "pf"         'psw-switch-function
+        ; "pp"         'psw-switch-projectile-files
+
+
+        ;; helm
+        "hs"         'helm-swoop
+        "hi"         'helm-imenu
+
+        ;; ido
+        "l"          'ido-goto-symbol
+        "f"          'ido-find-file
 )
 
 (provide 'my-leader-keys)
