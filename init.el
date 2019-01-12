@@ -57,6 +57,9 @@
         (unless (package-installed-p package)
             (package-install package))))
 
+;; roswell
+(load (expand-file-name "~/.roswell/helper.el"))
+
 ;; =================================================================
 ;; requires
 ;;
