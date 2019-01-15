@@ -22,11 +22,11 @@
                   evil-surround
                   evil-visualstar
                   faff-theme
-                  neotree
-                  ace-jump-buffer
-                  popup-switcher
-                  helm
-                  helm-swoop
+                  ;; neotree
+                  ;; ace-jump-buffer
+                  ;; popup-switcher
+                  ;; helm
+                  ;; helm-swoop
                   ))
 
 
@@ -71,19 +71,19 @@
 (require 'my-buffers)
 ;(require 'my-ag)
 ; (require 'my-autocomplete)
-(require 'my-dired)
-(require 'my-neotree)
-(require 'my-ido)
+;; (require 'my-dired)
+;; (require 'my-neotree)
+;; (require 'my-ido)
 ;(require 'my-languages)
 (require 'my-evil)
-(require 'my-help)
-(require 'my-info)
+;; (require 'my-help)
+;; (require 'my-info)
 ; (require 'my-eshell)
-(require 'my-package-list)
+;; (require 'my-package-list)
 ;(require 'my-bookmarks)
 ; (require 'my-ielm)
 ; (require 'my-sly)
-(require 'my-helm)
+;; (require 'my-helm)
 ; (require 'my-magit)
 ; (require 'my-projects)
 (require 'my-leader-keys)

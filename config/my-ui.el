@@ -25,19 +25,19 @@
 (setq font-lock-maximum-decoration t)
 
 ;; Window size. Set font
-(add-to-list 'default-frame-alist '(width . 110))
+;; (add-to-list 'default-frame-alist '(width . 110))
 (if (my-system-is-windows)
   ;; my windows machine
   (add-to-list 'default-frame-alist '(height . 75))
   ;; linux
-  (add-to-list 'default-frame-alist '(height . 54)))
+  (add-to-list 'default-frame-alist '(fullscreen . maximized)))
 (setq initial-frame-alist '((left . 0) (top . 0)))
 (when (member "DejaVu Sans Mono" (font-family-list))
     (set-frame-font "DejaVu Sans Mono-10:antialias=natural" nil t))
 
 ;; maximize main window when emacs starts
-; (add-to-list 'default-frame-alist
-             ; '(fullscreen . maximized))
+;(add-to-list 'default-frame-alist
+             ;'(fullscreen . maximized))
 
 (defun my-update-emacs-title ()
   "Update the Emacs title based on the current buffer.
@@ -114,7 +114,7 @@ name of the buffer."
 (setq search-highlight t
       query-replace-highlight t)
 
-;; Cursor for evil mode
+;; Cursor for evil mode (faff theme)
 (setq evil-default-cursor  '("#cd0000" box))
 (setq evil-normal-state-cursor  '("#00008b" box))
 (setq evil-insert-state-cursor  '("#00008b" (hbar . 3)))
@@ -130,7 +130,7 @@ name of the buffer."
 ;(add-to-list 'custom-theme-load-path
               ;(concat user-emacs-directory "themes"))
 
-; ;; load my favorite theme
+;; load my favorite theme
 ;(load-theme 'classic t t)
 ;(enable-theme 'classic)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

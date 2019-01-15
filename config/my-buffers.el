@@ -25,7 +25,7 @@
                    ("emacs" (or
                               (name . "^\\*scratch\\*$")
                               (name . "^\\*Messages\\*$")))
-                   ("Web Dev" (or (mode . html-mode)
+                   ("Web" (or (mode . html-mode)
                                   (mode . json-mode)
                                   (mode . css-mode)))
                    ("Help" (or
@@ -33,8 +33,7 @@
                              (name . "\*Apropos\*")
                              (name . "\*info\*")))
                    ("emacs created" (or
-                                      (name . "^\\*")))
-                   ))))
+                                      (name . "^\\*")))))))
 
 ;; apply 
 (add-hook 'ibuffer-mode-hook

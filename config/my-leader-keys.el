@@ -40,7 +40,7 @@
         "TAB"        'my-hop-around-buffers
         "b"          'ibuffer
         "B"          'switch-to-buffer
-        "jb"         'ace-jump-thefiles-buffers
+        ;; "jb"         'ace-jump-thefiles-buffers
 
         ;; popup-switcher config
         "pb"         'psw-switch-buffer
