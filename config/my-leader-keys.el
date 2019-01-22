@@ -28,7 +28,7 @@
         ","          'other-window
 
         "#"          'linum-mode
-        "x"          'smex
+        ;"x"          'smex
 
         ;; evil-nerd-commenter config
         "cc"         'evilnc-comment-or-uncomment-lines
@@ -51,8 +51,8 @@
 
 
         ;; helm
-        "hs"         'helm-swoop
-        "hi"         'helm-imenu
+        ;"hs"         'helm-swoop
+        ;"hi"         'helm-imenu
 
         ;; ido
         "l"          'ido-goto-symbol

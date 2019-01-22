@@ -13,7 +13,7 @@
 (setq redisplay-dont-pause t)
 
 ; Keyboard: input method
-; toggle: C-\
+; toggle:  C-\
 (setq default-input-method 'russian-computer)
 
 ; global Highlight current textline
@@ -31,6 +31,7 @@
   (add-to-list 'default-frame-alist '(height . 75))
   ;; linux
   (add-to-list 'default-frame-alist '(fullscreen . maximized)))
+
 (setq initial-frame-alist '((left . 0) (top . 0)))
 (when (member "DejaVu Sans Mono" (font-family-list))
     (set-frame-font "DejaVu Sans Mono-10:antialias=natural" nil t))
@@ -135,6 +136,7 @@ name of the buffer."
 ;(enable-theme 'classic)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
 ;; Calendar
 (setq display-time-24hr-format t)
 (setq display-time-day-and-date t)
@@ -152,6 +154,6 @@ name of the buffer."
 
 ;; Evil mode
 (require 'evil)
-(evil-mode 1)
+(evil-mode t)
 
 (provide 'my-ui)

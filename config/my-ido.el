@@ -127,6 +127,7 @@
       ;:config
       ;(progn
         ;(ido-ubiquitous-mode 1)))
+
     (use-package ido-completing-read+
       :ensure ido-completing-read+
       :config
