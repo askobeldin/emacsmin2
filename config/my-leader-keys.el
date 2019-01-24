@@ -28,7 +28,7 @@
         ","          'other-window
 
         "#"          'linum-mode
-        ;"x"          'smex
+        "x"          'smex
 
         ;; evil-nerd-commenter config
         "cc"         'evilnc-comment-or-uncomment-lines
