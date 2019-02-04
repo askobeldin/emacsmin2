@@ -13,3 +13,5 @@ semanticdb/
 *.*~
 bookmarks
 projectile-bookmarks*
+
+smex-items
