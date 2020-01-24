@@ -21,12 +21,12 @@
                   evil-matchit
                   evil-surround
                   evil-visualstar
-                  faff-theme
+                  ;; faff-theme
                   ;; neotree
                   ;; ace-jump-buffer
-                  popup-switcher
-                  helm
-                  helm-swoop
+                  ;;popup-switcher
+                  ;;helm
+                  ;;helm-swoop
                   ))
 
 
@@ -83,11 +83,11 @@
 ;(require 'my-bookmarks)
 ; (require 'my-ielm)
 ; (require 'my-sly)
-(require 'my-helm)
+;(require 'my-helm)
 ; (require 'my-magit)
 ; (require 'my-projects)
 (require 'my-leader-keys)
 ;(require 'my-autoinsert)
-(require 'my-woman)
+;(require 'my-woman)
 
 (provide 'init)

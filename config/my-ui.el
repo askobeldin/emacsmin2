@@ -115,31 +115,39 @@ name of the buffer."
 (setq search-highlight t
       query-replace-highlight t)
 
-;; Cursor for evil mode (faff theme)
-(setq evil-default-cursor  '("#cd0000" box))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; faff theme
+;; Cursor for evil mode
+(setq evil-default-cursor       '("#cd0000" box))
 (setq evil-normal-state-cursor  '("#00008b" box))
 (setq evil-insert-state-cursor  '("#00008b" (hbar . 3)))
 (setq evil-replace-state-cursor '("#008b8b" box))
-(setq evil-motion-state-cursor '("#ffff00" box))
+(setq evil-motion-state-cursor  '("#ffff00" box))
 (setq evil-emacs-state-cursor   '("#cd0000" hollow))
 
-
-;; Theme
 (load-theme 'faff t)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;(add-to-list 'custom-theme-load-path
-              ;(concat user-emacs-directory "themes"))
 
-;; load my favorite theme
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; classic theme
+;; Cursor for evil mode
+;(add-to-list 'custom-theme-load-path
+;          (concat user-emacs-directory "themes"))
+;(setq evil-default-cursor       '("#ffff00" box))
+;(setq evil-normal-state-cursor  '("#ffff00" box))
+;(setq evil-insert-state-cursor  '("#ffff00" (hbar . 3)))
+;(setq evil-replace-state-cursor '("#ffff00" box))
+;(setq evil-motion-state-cursor  '("#ffff00" box))
+;(setq evil-emacs-state-cursor   '("#ffff00" hollow))
+;
 ;(load-theme 'classic t t)
 ;(enable-theme 'classic)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Calendar
-;(setq display-time-24hr-format t)
-;(setq display-time-day-and-date t)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
 ;;;;; (display-time)
 ;(setq calendar-date-display-form 
       ;(quote ((format "%04s-%02d-%02d" year 
@@ -149,9 +157,10 @@ name of the buffer."
       ;(quote (24-hours ":" minutes 
               ;(if time-zone " (") time-zone 
               ;(if time-zone ")"))))
-;(setq calendar-week-start-day 1)
-;(setq european-calendar-style t)
+(setq calendar-week-start-day 1)
+(setq european-calendar-style t)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Evil mode
 (require 'evil)
 (evil-mode t)
