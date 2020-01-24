@@ -24,9 +24,9 @@
                   faff-theme
                   ;; neotree
                   ;; ace-jump-buffer
-                  ;; popup-switcher
-                  ;; helm
-                  ;; helm-swoop
+                  popup-switcher
+                  helm
+                  helm-swoop
                   ))
 
 
@@ -58,7 +58,7 @@
             (package-install package))))
 
 ;; roswell
-(load (expand-file-name "~/.roswell/helper.el"))
+;(load (expand-file-name "~/.roswell/helper.el"))
 
 ;; =================================================================
 ;; requires
@@ -83,7 +83,7 @@
 ;(require 'my-bookmarks)
 ; (require 'my-ielm)
 ; (require 'my-sly)
-;; (require 'my-helm)
+(require 'my-helm)
 ; (require 'my-magit)
 ; (require 'my-projects)
 (require 'my-leader-keys)
