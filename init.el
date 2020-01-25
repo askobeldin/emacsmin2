@@ -21,7 +21,7 @@
                   evil-matchit
                   evil-surround
                   evil-visualstar
-                  ;; faff-theme
+                  faff-theme
                   ;; neotree
                   ;; ace-jump-buffer
                   ;;popup-switcher

@@ -17,17 +17,20 @@
                    ("Code" (or 
                              (mode . python-mode)
                              (mode . emacs-lisp-mode)
+                             (mode . perl-mode)
+                             (mode . js-mode)
                              (mode . lisp-mode)))
                    ("Planner" (or
-                             (name . "^\\*Calendar\\*$")
-                             (name . "^diary$")
-                             (mode . org-mode)))
+                                 (name . "^\\*Calendar\\*$")
+                                 (name . "^diary$")
+                                 (mode . org-mode)))
                    ("emacs" (or
                               (name . "^\\*scratch\\*$")
                               (name . "^\\*Messages\\*$")))
-                   ("Web" (or (mode . html-mode)
-                                  (mode . json-mode)
-                                  (mode . css-mode)))
+                   ("Web" (or 
+                              (mode . html-mode)
+                              (mode . json-mode)
+                              (mode . css-mode)))
                    ("Help" (or
                              (name . "\*Help\*")
                              (name . "\*Apropos\*")
@@ -50,39 +53,39 @@
                     (evil-set-initial-state 'ibuffer-mode 'normal)
                     (evil-define-key 'normal ibuffer-mode-map
 
-                        [backtab] 'ibuffer-toggle-filter-group
-                        [tab] 'ibuffer-toggle-filter-group
+                        [backtab]   'ibuffer-toggle-filter-group
+                        [tab]       'ibuffer-toggle-filter-group
+                                    
+                        (kbd "0")   'digit-argument
+                        (kbd "1")   'digit-argument
+                        (kbd "2")   'digit-argument
+                        (kbd "3")   'digit-argument
+                        (kbd "4")   'digit-argument
+                        (kbd "5")   'digit-argument
+                        (kbd "6")   'digit-argument
+                        (kbd "7")   'digit-argument
+                        (kbd "8")   'digit-argument
+                        (kbd "9")   'digit-argument
+                                    
+                        (kbd "m")   'ibuffer-mark-forward
+                        (kbd "v")   'ibuffer-toggle-marks
+                        (kbd "u")   'ibuffer-unmark-forward
 
-                        (kbd "0") 'digit-argument
-                        (kbd "1") 'digit-argument
-                        (kbd "2") 'digit-argument
-                        (kbd "3") 'digit-argument
-                        (kbd "4") 'digit-argument
-                        (kbd "5") 'digit-argument
-                        (kbd "6") 'digit-argument
-                        (kbd "7") 'digit-argument
-                        (kbd "8") 'digit-argument
-                        (kbd "9") 'digit-argument
-
-                        (kbd "m") 'ibuffer-mark-forward
-                        (kbd "v") 'ibuffer-toggle-marks
-                        (kbd "u") 'ibuffer-unmark-forward
-
-                        (kbd "j") 'evil-next-line
-                        (kbd "k") 'evil-previous-line
+                        (kbd "j")   'evil-next-line
+                        (kbd "k")   'evil-previous-line
                         (kbd "DEL") 'ibuffer-unmark-backward
                         (kbd "* *") 'ibuffer-unmark-all
 
-                        (kbd "d") 'ibuffer-mark-for-delete
-                        (kbd "x") 'ibuffer-do-kill-on-deletion-marks
+                        (kbd "d")   'ibuffer-mark-for-delete
+                        (kbd "x")   'ibuffer-do-kill-on-deletion-marks
 
                         ;; immediate operations
-                        (kbd "n") 'ibuffer-forward-filter-group
+                        (kbd "n")   'ibuffer-forward-filter-group
                         (kbd "SPC") 'forward-line
-                        (kbd "g") 'ibuffer-update
+                        (kbd "g")   'ibuffer-update
 
-                        "-" 'ibuffer-add-to-tmp-hide
-                        "+" 'ibuffer-add-to-tmp-show
+                        "-"         'ibuffer-add-to-tmp-hide
+                        "+"         'ibuffer-add-to-tmp-show
 
                         (kbd "s i") 'ibuffer-invert-sorting
                         (kbd "s a") 'ibuffer-do-sort-by-alphabetic
@@ -92,24 +95,24 @@
                         (kbd "s m") 'ibuffer-do-sort-by-major-mode
 
                         ;; marked operation
-                        (kbd "A") 'ibuffer-do-view
-                        (kbd "D") 'ibuffer-do-delete
-                        (kbd "E") 'ibuffer-do-eval
-                        (kbd "F") 'ibuffer-do-shell-command-file
-                        (kbd "I") 'ibuffer-do-query-replace-regexp
-                        (kbd "H") 'ibuffer-do-view-other-frame
-                        (kbd "P") 'ibuffer-do-shell-command-pipe-replace
-                        (kbd "M") 'ibuffer-do-toggle-modified
-                        (kbd "O") 'ibuffer-do-occur
-                        ;; (kbd "P") 'ibuffer-do-print
-                        (kbd "Q") 'ibuffer-do-query-replace
-                        (kbd "R") 'ibuffer-do-rename-uniquely
-                        (kbd "S") 'ibuffer-do-save
-                        (kbd "T") 'ibuffer-do-toggle-read-only
-                        (kbd "U") 'ibuffer-do-replace-regexp
-                        (kbd "V") 'ibuffer-do-revert
-                        (kbd "W") 'ibuffer-do-view-and-eval
-                        (kbd "X") 'ibuffer-do-shell-command-pipe
+                        (kbd "A")   'ibuffer-do-view
+                        (kbd "D")   'ibuffer-do-delete
+                        (kbd "E")   'ibuffer-do-eval
+                        (kbd "F")   'ibuffer-do-shell-command-file
+                        (kbd "I")   'ibuffer-do-query-replace-regexp
+                        (kbd "H")   'ibuffer-do-view-other-frame
+                        (kbd "P")   'ibuffer-do-shell-command-pipe-replace
+                        (kbd "M")   'ibuffer-do-toggle-modified
+                        (kbd "O")   'ibuffer-do-occur
+                        ;;(kbd "P") 'ibuffer-do-print
+                        (kbd "Q")   'ibuffer-do-query-replace
+                        (kbd "R")   'ibuffer-do-rename-uniquely
+                        (kbd "S")   'ibuffer-do-save
+                        (kbd "T")   'ibuffer-do-toggle-read-only
+                        (kbd "U")   'ibuffer-do-replace-regexp
+                        (kbd "V")   'ibuffer-do-revert
+                        (kbd "W")   'ibuffer-do-view-and-eval
+                        (kbd "X")   'ibuffer-do-shell-command-pipe
                         )))
 
 (provide 'my-buffers)
