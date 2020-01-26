@@ -3,6 +3,7 @@
     "Lookup the current meaning of `q` key in the active package-menu-mode"
     (interactive)
     (call-interactively (lookup-key package-menu-mode-map "q")))
+    
   (evil-set-initial-state 'package-menu-mode 'normal)
   (evil-define-key 'normal package-menu-mode-map
     ;; bound when package-menu is initialized
@@ -24,6 +25,7 @@
     "x" 'package-menu-execute
     "?" 'package-menu-quick-help
     )
+    
   (evil-define-key 'motion package-menu-mode-map
     "q" 'my-package-list-get-q-key
     "h" 'evil-backward-char
