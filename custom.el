@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-check-signature nil)
  '(package-selected-packages
-   '(ido-completing-read+ ido-vertical-mode flx-ido ido-ubiquitous smex key-chord evil-visualstar evil-surround evil-matchit evil-nerd-commenter evil-leader evil use-package)))
+   '(company ag expand-region guide-key ace-jump-mode ido-completing-read+ ido-vertical-mode flx-ido ido-ubiquitous smex key-chord evil-visualstar evil-surround evil-matchit evil-nerd-commenter evil-leader evil use-package)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

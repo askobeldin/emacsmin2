@@ -13,6 +13,10 @@
     (progn
         (evil-leader/set-leader ",")
         (global-evil-leader-mode t)))
+        
+(require 'evil-lispy)
+;; make evil-lispy start in the modes you want
+(add-hook  'emacs-lisp-mode-hook    #'evil-lispy-mode)
 
 ;; Here's what we've all been waiting for.
 ;; Recreate Vim inside Emacs.

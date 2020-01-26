@@ -21,12 +21,13 @@
                   evil-matchit
                   evil-surround
                   evil-visualstar
+                  evil-lispy
                   faff-theme
                   ;; neotree
-                  ;; ace-jump-buffer
-                  ;;popup-switcher
-                  ;;helm
-                  ;;helm-swoop
+                  ace-jump-buffer
+                  popup-switcher
+                  helm
+                  helm-swoop
                   ))
 
 
@@ -67,10 +68,10 @@
 (require 'my-init)
 (require 'my-env)
 (require 'my-ui)
-;(require 'my-interaction)
+(require 'my-interaction)
 (require 'my-buffers)
-;(require 'my-ag)
-; (require 'my-autocomplete)
+(require 'my-ag)
+(require 'my-autocomplete)
 (require 'my-dired)
 ;; (require 'my-neotree)
 (require 'my-ido)
@@ -81,13 +82,13 @@
 ; (require 'my-eshell)
 (require 'my-package-list)
 ;(require 'my-bookmarks)
-; (require 'my-ielm)
+(require 'my-ielm)
 ; (require 'my-sly)
-;(require 'my-helm)
+(require 'my-helm)
 ; (require 'my-magit)
 ; (require 'my-projects)
 (require 'my-leader-keys)
-;(require 'my-autoinsert)
-;(require 'my-woman)
+; (require 'my-autoinsert)
+(require 'my-woman)
 
 (provide 'init)
