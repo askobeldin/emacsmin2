@@ -15,7 +15,8 @@
 
 ;; Packages list
 (defvar required-packages
-                '(evil
+                '(company
+                  evil
                   evil-leader
                   evil-nerd-commenter
                   evil-matchit
@@ -23,6 +24,8 @@
                   evil-visualstar
                   evil-lispy
                   faff-theme
+                  slime
+                  ;; slime-autoloads
                   ;; neotree
                   ;; ace-jump-buffer
                   ;; popup-switcher
@@ -84,6 +87,7 @@
 ;(require 'my-bookmarks)
 ;(require 'my-ielm)
 ; (require 'my-sly)
+(require 'my-slime)
 ;(require 'my-helm)
 ; (require 'my-magit)
 ; (require 'my-projects)

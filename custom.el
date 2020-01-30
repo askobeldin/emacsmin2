@@ -3,10 +3,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(evil-lispy-cursor '("red" box))
+ '(evil-lispy-cursor (quote ("red" box)))
  '(package-check-signature nil)
  '(package-selected-packages
-   '(company ag expand-region guide-key ace-jump-mode ido-completing-read+ ido-vertical-mode flx-ido ido-ubiquitous smex key-chord evil-visualstar evil-surround evil-matchit evil-nerd-commenter evil-leader evil use-package)))
+   (quote
+    (company ag expand-region guide-key ace-jump-mode ido-completing-read+ ido-vertical-mode flx-ido ido-ubiquitous smex key-chord evil-visualstar evil-surround evil-matchit evil-nerd-commenter evil-leader evil use-package))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
