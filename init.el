@@ -25,6 +25,7 @@
                   evil-lispy
                   faff-theme
                   slime
+                  ac-slime
                   ;; slime-autoloads
                   ;; neotree
                   ;; ace-jump-buffer

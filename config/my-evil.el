@@ -89,8 +89,8 @@
 (use-package evil-lispy
   :config
     (progn
-       (add-hook 'emacs-lisp-mode-hook #'evil-lispy-mode)
-       (add-hook 'lisp-mode-hook #'evil-lispy-mode)))
+      (add-hook 'emacs-lisp-mode-hook  #'evil-lispy-mode)
+      (add-hook 'lisp-mode-hook        #'evil-lispy-mode)))
 
 ;(require 'evil-lispy)
 ;; make evil-lispy start in the modes you want
