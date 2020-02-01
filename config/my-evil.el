@@ -97,7 +97,4 @@
 ;(add-hook 'emacs-lisp-mode-hook #'evil-lispy-mode)
 ;(add-hook 'lisp-mode-hook #'evil-lispy-mode)
 
-
-
-
 (provide 'my-evil)
