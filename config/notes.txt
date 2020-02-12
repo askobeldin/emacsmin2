@@ -1,0 +1,190 @@
+Ace jump buffer group - for emacs customize
+
+Commands
+--------
+(ace-jump-buffer)
+Open the buffer menu and go to the selected buffer in the current window.
+
+(ace-jump-buffer-with-configuration)
+Select a bs-configuration, then show its buffer menu and go to the selected buffer.
+
+(ace-jump-buffer-other-window)
+Open the buffer menu and go to the selected buffer in other window.
+
+(ace-jump-buffer-in-one-window)
+Open the buffer menu and go to the selected buffer in full window.
+
+(ace-jump-same-mode-buffers)
+Show a menu of buffers of the same mode as the current buffer.
+
+(ace-jump-persp-buffers)
+Show a menu of buffers in the current perspective (persp-mode required.).
+
+(ace-jump-projectile-buffers)
+Show a menu of buffers in the current project (projectile required.).
+
+Variables
+---------
+ajb-max-window-height
+The max window height for the buffer menu. The default is 20.
+
+ajb-sort-function
+The function for sorting buffers in the menu. The default is (bs--sort-by-recentf).
+
+ajb-bs-configuration
+The bs configuration to use when displaying the menu with
+ace-jump-buffer. The default is "all". If you use perspective, you
+may set this to "persp" to scope the buffer list to your current
+workspace/project. If you use projectile, you may set this to
+"projectile" to scope the buffer list to your current project.
+
+##############################################################################
+How to use expand-region.el in Emacs efficiently
+
+expand-region.el is very useful. I use it to select a code segment and
+keep press its expand key until the the desired region is selected.
+
+The only issue is its recommended hotkey for "er/expand-region" is
+"C-=". A little bit hard to press.
+
+After marking a region by pressing "C-=", I press "=" to expand the
+region and "-" to contract.
+
+As you may have noticed, I need move the right hand to press "=" or
+"-" so it's not quick enough.
+
+The solution is simple, press ",xx" to select the initial region. Keep
+press "x" to expand. "z" to contract region because "x" "z" is close
+to left hand fingers.
+
+evil-mode and evil-leader is required to implement this.
+
+Here is the setup:
+
+    (require 'evil)
+    (require 'evil-leader)
+    (evil-mode 1) ;; enable evil-mode
+
+    (eval-after-load "evil" '(setq expand-region-contract-fast-key "z"))
+    (evil-leader/set-key "xx" 'er/expand-region)
+##############################################################################
+evil-surround
+=============
+
+Add surrounding
+---------------
+You can surround in visual-state with S<textobject> or gS<textobject>. or in
+normal-state with ys<textobject> or yS<textobject>.
+
+Change surrounding
+------------------
+You can change a surrounding with cs<old-textobject><new-textobject>.
+
+Delete surrounding
+------------------
+You can delete a surrounding with ds<textobject>.
+
+Add new surround pairs
+----------------------
+A surround pair is this (trigger char with textual left and right strings):
+    (?> . ("<" . ">"))
+or this (trigger char and calling a function):
+    (?< . surround-read-tag)
+You can add new by adding them to evil-surround-pairs-alist. For more
+information do: C-h v evil-surround-pairs-alist.
+
+evil-surround-pairs-alist is a buffer local variable, which means that you can
+have different surround pairs in different modes. By default < is used to insert
+a tag, in C++ this may not be useful - but inserting angle brackets is, so you
+can add this:
+(add-hook 'c++-mode-hook (lambda ()
+                           (push '(?< . ("< " . " >")) evil-surround-pairs-alist)))
+
+Don't worry about having two entries for < surround will take the first.
+
+Or in Emacs Lisp modes using ` to enter ` ' is quite useful, but not adding a
+pair of ` (the default behavior if no entry in evil-surround-pairs-alist is
+present), so you can do this:
+(add-hook 'emacs-lisp-mode-hook (lambda ()
+                                  (push '(?` . ("`" . "'")) evil-surround-pairs-alist)))
+
+without affecting your Markdown surround pairs, where the default is useful.
+
+To change the default evil-surround-pairs-alist you have to use setq-default,
+for example to remove all default pairs:
+    (setq-default evil-surround-pairs-alist '())
+or to add a pair that surrounds with two ` if you enter ~:
+    (setq-default evil-surround-pairs-alist (cons '(?~ . ("``" . "``"))
+                                             evil-surround-pairs-alist))
+
+Add new supported operators
+---------------------------
+You can add support for new operators by adding them to
+evil-surround-operator-alist. For more information do: C-h v
+evil-surround-operator-alist.
+
+By default, surround works with evil-change and evil-delete. To add support for
+the evil-paredit package, you need to add evil-paredit-change and
+evil-paredit-delete to evil-surround-operator-alist, like so:
+    (add-to-list 'evil-surround-operator-alist
+                 '(evil-paredit-change . change))
+    (add-to-list 'evil-surround-operator-alist
+                 '(evil-paredit-delete . delete))
+
+##############################################################################
+При использовании desktop.el к сохраняемым данным добавляет кодировку,
+с которой использовался буфер:
+    (add-to-list 'desktop-locals-to-save 'buffer-file-coding-system)
+
+emacs позволяет указывать нужную кодировку для определенных типов файлов:
+    см. переменную file-coding-system-alist
+###############################################################################
+автоматическое удаление лишних пробелов и табов в конце строк:
+http://reangdblog.blogspot.com/2015/09/emacs.html
+
+отображение непечатаемых символов
+http://reangdblog.blogspot.com/2015/06/emacs_29.html
+###############################################################################
+json-mode
+---------
+
+C-c C-f  -- 'jsom-mode-beautify
+C-c C-p  -- 'json-mode-show-path
+###############################################################################
+helm info
+---------
+
+https://github.com/emacs-helm/helm/wiki
+http://tuhdo.github.io/helm-intro.html
+###############################################################################
+auto-insert mode
+----------------
+
+Another way of using autoinsert is to define files that contain the
+stuff to be inserted and connect them with a filename extension:
+
+(auto-insert-mode)  ;;; Adds hook to find-files-hook
+;; Or use custom, *NOTE* Trailing slash important
+(setq auto-insert-directory "~/.mytemplates/")
+;; If you don't want to be prompted before insertion
+(setq auto-insert-query nil)
+(define-auto-insert "\.py" "my-python-template.py")
+(define-auto-insert "\.php" "my-php-template.php")
+
+///////////////////////////////////////////////////////////////////////////////
+This (almost) minimal examples worked for me:
+
+(require 'autoinsert)
+(setq auto-insert 'other
+      auto-insert-query nil
+      auto-insert-directory user-emacs-directory
+      auto-insert-alist '(
+            ("\\.\\([Hh]\\|hh\\|hpp\\)\\'" . "template.h")
+            ))
+(add-hook 'find-file-hook #'auto-insert)
+
+///////////////////////////////////////////////////////////////////////////////
+see also:
+https://github.com/alexott/emacs-configs/blob/master/rc/emacs-rc-auto-insert.el
+https://github.com/jbranso/.emacs.d
+###############################################################################

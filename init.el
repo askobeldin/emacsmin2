@@ -29,9 +29,12 @@
                   ;; slime-autoloads
                   ;; neotree
                   ;; ace-jump-buffer
-                  ;; popup-switcher
-                  ;; helm
-                  ;; helm-swoop
+                  popup-switcher
+                  helm
+                  helm-swoop
+                  json-mode
+                  ;; python-mode
+                  sphinx-doc
                   ))
 
 
@@ -79,7 +82,7 @@
 (require 'my-dired)
 ;; (require 'my-neotree)
 (require 'my-ido)
-;(require 'my-languages)
+(require 'my-languages)
 (require 'my-evil)
 (require 'my-help)
 (require 'my-info)
@@ -89,11 +92,11 @@
 ;(require 'my-ielm)
 ; (require 'my-sly)
 (require 'my-slime)
-;(require 'my-helm)
+(require 'my-helm)
 ; (require 'my-magit)
 ; (require 'my-projects)
 (require 'my-leader-keys)
-; (require 'my-autoinsert)
-;(require 'my-woman)
+(require 'my-autoinsert)
+(require 'my-woman)
 
 (provide 'init)
