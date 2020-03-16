@@ -67,7 +67,7 @@
       ;; (setq inferior-lisp-program unix-sbcl-bin)
       (setq common-lisp-hyperspec-root (expand-file-name "/home/andrey/hyperspec/"))
       (setq common-lisp-hyperspec-symbol-table 
-            (expand-file-name "/home/andrey/hyperspec/Data/Map_Sym.txt"))))
+            (expand-file-name "~/hyperspec/Data/Map_Sym.txt"))))
 
 (if (my-system-is-windows)
     (progn

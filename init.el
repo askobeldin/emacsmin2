@@ -23,6 +23,7 @@
                   evil-surround
                   evil-visualstar
                   evil-lispy
+                  evil-org
                   faff-theme
                   slime
                   ac-slime
@@ -98,5 +99,6 @@
 (require 'my-leader-keys)
 (require 'my-autoinsert)
 (require 'my-woman)
+(require 'my-evil-org)
 
 (provide 'init)
