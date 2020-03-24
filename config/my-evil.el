@@ -11,7 +11,8 @@
   :demand evil-leader
   :config
     (progn
-        (evil-leader/set-leader ",")
+        ;(evil-leader/set-leader ",")
+        (evil-leader/set-leader "<SPC>")
         (global-evil-leader-mode t)))
         
 
